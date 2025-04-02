@@ -1,0 +1,15 @@
+{
+  "name": "segundoparcial",
+  "version": "1.0.0",
+  "main": "serial-monitor.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "serialport": "^13.0.0"
+  }
+}
