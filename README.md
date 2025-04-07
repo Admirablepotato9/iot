@@ -22,8 +22,25 @@ Sistema completo para monitoreo y control de dispositivos IoT mediante comunicac
   - Servidor Node.js para registro de datos
   - Protocolo serial estandarizado (CSV)
 
-- **Funcionalidades avanzadas**:
-  - Control automático/manual del LED
-  - Validación de datos de entrada
-  - Registro histórico en archivo log
-  - Sistema de colas para procesamiento asíncrono
+# 🛠️ Tecnologías Utilizadas
+
+| Componente       | Tecnologías                                 |
+|------------------|---------------------------------------------|
+| Frontend         | Python 3.10, Tkinter, PySerial              |
+| Backend          | Node.js 18.x, SerialPort                    |
+| Comunicación     | Protocolo RS-232, Baud Rate 9600            |
+| Almacenamiento   | Sistema de archivos local (JSON + TXT)      |
+
+## 📦 Instalación
+
+### Requisitos Previos
+- Python 3.10+
+- Node.js 18.x
+- Git
+
+### Pasos de Instalación
+
+1. Clonar repositorio:
+```bash
+git clone https://github.com/Admirablepotato9/iot.git
+```

@@ -14,9 +14,14 @@ Este programa permite controlar y monitorear diversos sensores y actuadores IoT:
 Los datos se envían cada 2 segundos por puerto serial en formato CSV:
 sonico,fotoresistencia,temperatura,humedad,led_ultra,leds_binario,buzzer,rfid
 
-Autor: [Tu nombre]
+Autores: 
+Ricardo Robles Abad
+Paola de Jesus Rebollar Cruz
+Brayan Sebastian Ruiz
+Miguel Atilano Tlapaya
+Uri Yael Alvarez Lopes
 Versión: 1.0
-Fecha: [Fecha]
+Fecha: 01/04/2025
 """
 
 import tkinter as tk
