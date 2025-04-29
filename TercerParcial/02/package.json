@@ -1,0 +1,14 @@
+{
+  "name": "test_mqtt",
+  "version": "1.0.0",
+  "description": "Pruebas del protocolo mqtt en node js",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "author": "ric",
+  "license": "ISC",
+  "dependencies": {
+    "mqtt": "^5.12.0"
+  }
+}
