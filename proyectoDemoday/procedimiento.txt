@@ -1,0 +1,33 @@
+1. Crear puertos virtuales 
+socat -d -d pty,raw,echo=0 pty,raw,echo=0
+
+2. Editar código de simuladorArduino.py
+SERIAL PORT = 'primer puerto'
+
+3. Editar el archivo .env con los datos que queremos
+SEDE=amerikeCDMX
+PISO=P1
+SERIAL_PORT= segundo puerto  
+
+4. Encender UbuntuServer y verificar status mosquitto
+sudo systemctl status mosquitto
+
+5. Reconocemos ip en el server
+ip a
+
+6. Verificamos la ip en index.js
+
+7. Verificamos la ip en subscriber.js
+
+8. Ejecución del SimuladorArduino
+python3 simulador.py
+
+9. En la carpeta nodeMQTT ejecutamos index.js
+node index.js
+
+10. Ejecutamos subscriber.py y seleccionamos el topic deseado, considerando .env
+python3 subscriber.py
+
+11. Verificamos respaldo local deteniendo mosquitto
+sudo systemctl stop mosquitto
+
