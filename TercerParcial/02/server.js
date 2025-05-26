@@ -7,21 +7,26 @@ client.on('connect', () => {
   setInterval(() => {
     const temperature = Math.floor(Math.random() * 50); // Generate random temperature
     client.publish('amerike/cyber/mqtt/ric', temperature.toString());
-    console.log(`Message published to "temperature": ${temperature}`);
+    console.log(`Message published to "amerike/cyber/mqtt/ric": ${temperature}`); // Corregido nombre del topic en el log
   }, 5000); // Publish every 5 seconds
 });
 
 client.on('error', (error) => {
-  console.error('Connection error:', error);
+  console.error('MQTT Client Error:', error);
+});
 
-  if (error.error === -3008) {
+client.on('reconnect', () => {
+    console.log('Attempting to reconnect...');
+});
+  
+client.on('close', () => {
+    console.log('MQTT Connection closed');
+});
 
-    console.log('Connection error: Guardar en la db'+iConst);
-    iConst = iConst + 1;
-  }
-   else{
-    console.error('Connection error:', error);
-   }
+client.on('disconnect', (packet) => {
+    console.log('MQTT Client disconnected (received DISCONNECT packet)', packet ? `Reason Code: ${packet.reasonCode}` : '');
+});
 
-}
-);
+client.on('offline', () => {
+    console.log('MQTT Client is offline (will attempt to reconnect)');
+});
