@@ -28,7 +28,7 @@ import time
 
 # ===================== CONFIGURACIÓN INICIAL =====================
 # Configuración del puerto serial (ajustar según necesidad)
-SERIAL_PORT = '/dev/pts/5'    # Puerto serial de salida de datos
+SERIAL_PORT = 'COM1'    # Puerto serial de salida de datos
 BAUD_RATE = 9600        # Velocidad en baudios
 
 class EnhancedSensorUI:
